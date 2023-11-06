@@ -99,3 +99,38 @@ h2, h3 {
 h2 {
     font-size: 30px;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    h1 {
+        font-size: 48px; 
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3{
+        font-size: 32px;
+    }
+
+    .gridContain {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    img, video {
+        max-width: 100%; 
+    }
+    .spacing{
+        font-size: 20px;
+    }
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
