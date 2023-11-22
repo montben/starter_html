@@ -26,9 +26,7 @@ h1, h2, h3{
 .skip:focus {
     top: 0;
 }
-.toobig {
-    transform: scale(0.7);
-}
+
 
 body{
     background-color: #94618E;
@@ -41,6 +39,9 @@ body{
 .petsTitle, .recipesTitle, .travelTitle {
     font-weight: bold;
     text-decoration: underline;
+}
+.toobig {
+    transform: scale(0.7);
 }
 
 .spacing li{
@@ -190,3 +191,16 @@ body.dark-mode {
         background-image: url('images/yellowstone_cauldron.jpg');
     }
 }
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-icon {
+    width: 50px;
+    height: 50px;
+}
+
