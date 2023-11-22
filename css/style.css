@@ -26,7 +26,9 @@ h1, h2, h3{
 .skip:focus {
     top: 0;
 }
-
+.toobig {
+    transform: scale(0.7);
+}
 
 body{
     background-color: #94618E;
