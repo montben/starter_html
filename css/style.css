@@ -12,12 +12,27 @@ h1{
 h1, h2, h3{
     text-align: center;
 }
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 1s ease, color 1s ease, background 1s ease;
+}
+
+.skip:focus {
+    top: 0;
+}
 
 
 body{
     background-color: #94618E;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif;
+    font-family: 'Titillium Web', sans-serif;
 }
+
 * {
     color: white
 }
@@ -31,13 +46,14 @@ body{
     margin-top: 5px;
     text-align: center;
     border: 1px solid white;
-    background-color: #49274A;
+   background-image: url('../images/purplebg.jpg');
 }
 
 .gridContain {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    
 }
 
 div{
@@ -54,7 +70,12 @@ img, video {
     filter: grayscale(50%);
     border: 3px solid #49274A;
 
-
+}
+img:hover {
+    transform: scale(1.2);
+}
+video:hover {
+    transform: scale(1.2);
 }
 
 .animated-title {
@@ -100,7 +121,7 @@ h2 {
     font-size: 30px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
 
     h1 {
         font-size: 48px; 
@@ -124,13 +145,46 @@ h2 {
     }
 }
 
+@media only screen and (min-width: 1024px) {
+
+    h1 {
+        font-size: 48px; 
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3{
+        font-size: 32px;
+    }
+
+    .gridContain {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    img, video {
+        max-width: 100%; 
+    }
+    .spacing{
+        font-size: 20px;
+    }
+}
+
 body.light-mode {
     background-color: #ffffff;
     color: #333333;
 }
 
-/* Dark mode styles */
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
+}
+
+.gifclass {
+    background-image: url('images/yellowstone_cauldron.gif');
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gifclass {
+        background-image: url('images/yellowstone_cauldron.jpg');
+    }
 }
